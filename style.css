@@ -1,0 +1,169 @@
+/* 
+Light Green = 
+Medium Green
+Dark Green 
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    padding: 30px;
+}
+.header{
+    height: 95vh;
+    background-image: linear-gradient(to right bottom,rgba(79, 216, 108, 0.9), rgba(6, 110, 6, 0.9)) ,
+                        url(Assest/Img/hero.jpeg);
+    background-size: cover ;
+    border-image-repeat: repeat;
+    background-position: top;
+    /* clip-path: polygon(0 0, 100% 0%, 100% 80%, 0 100%); */
+    clip-path: polygon(0 0 , 100% 0 , 100% 75vh , 0 100%);
+    position: relative;
+}
+
+.logo-box{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    cursor: pointer;
+}
+.logo{
+    height: 40px;
+}
+
+.main-box{
+    position: absolute;
+    color: white;
+    text-transform: uppercase;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50% );
+    backface-visibility: hidden;
+    text-align: center;
+    
+
+}
+.main-sub1{
+    display: block;
+    letter-spacing: 30px;
+    font-size: 60px;
+    font-weight: 800;
+    animation-timing-function: ease-out;
+    animation-name: animate-heading;
+    animation-duration: 1s;
+
+
+
+
+}
+.main-sub2{
+    display: block;
+    letter-spacing: 6px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    animation-timing-function: ease-out;
+    animation-name: sub-animate;
+    animation-duration: 1s;
+
+}
+
+
+@keyframes animate-heading {
+
+    0%  {
+        opacity: 0;
+        transform: translateX(-70px);
+
+        }
+        80%{
+            transform: translate(10px);
+        }
+
+    100%   {
+    
+        transform: translate(0);
+        opacity: 100;
+
+        }
+    
+}
+
+@keyframes sub-animate {
+    0%{
+        opacity: 0;
+        transform: translateX(70px);
+
+    }
+    80%{
+        transform: translate(-10px);
+    }
+    100%{
+        opacity: 100;
+        transform: translate(0);
+
+    }
+}
+
+
+/* =================================== Started Button From Here ==================================== */
+
+
+.btn {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 10px 30px;
+        transition: all .1s;
+}
+
+.first-btn{
+    color: grey;
+    background-color: white;
+    border-radius: 30px;
+    display: inline-block;
+
+}
+.btn:hover{
+
+    transform: translate(-3px);
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
+
+}
+
+.btn:active{
+    transform: translateY(-1px);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+}
+        
+
+@keyframes btn-hover {
+    
+    100%{
+        opacity: 0;
+        padding: 15px 80px;;
+        border-radius: 30px;
+        
+
+    }
+
+    80%{
+        opacity: 0;
+        padding: 20px 100px;
+        border-radius: 50px;
+        
+
+    }
+    0%{
+        opacity: 100;
+        padding: 15px 80px;;
+        border-radius: 30px;
+
+    }
+    
+}
